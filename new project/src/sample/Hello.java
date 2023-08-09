@@ -30,9 +30,6 @@ public class Hello {
 
 
 
-//    String hello = "안녕!";
-//    System.out.println("Hello World!");
-//    System.out.println(hello);
 
   }
 }
