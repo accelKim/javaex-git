@@ -23,7 +23,7 @@ public class Hello {
 
     //print 출력 하고 행을 바꾸지 않음
     //printf()
-    // Soutv 위 변수의 값을 바로 출력 해줌
+    // Soutv 위 변수의 값을 바로 출력 해줌!
 
 
 
