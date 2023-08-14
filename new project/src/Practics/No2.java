@@ -8,12 +8,12 @@ public class No2 {
     int i = 0;
     for (double[] interest: interests) {
       for (double interestEach: interest) {
-         sum1[i++] +=interestEach;
+         sum1[i] +=interestEach;
       }
       System.out.printf("%d차년도 평균 이자율 = %.2f %%\n",i+1,sum1[i]/4);
        sum2 += sum1[i++];
     }
-    System.out.printf("%d차년도 평균 이자율 = %.2f %%\n", sum1.length, sum2/3);
+    System.out.printf("%d년간 평균 이자율 = %.2f %%\n", sum1.length, sum2/3);
 
 
   }
