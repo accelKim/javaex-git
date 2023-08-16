@@ -1,4 +1,4 @@
-package Practics;
+package Challenge;
 
 public class no5 {
   public static void main(String[] args) {

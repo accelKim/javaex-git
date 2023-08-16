@@ -24,6 +24,10 @@ public class EnumEx {
     System.out.println(people.gender);
     System.out.println(people.direction);
 
+    System.out.println(Gender.valueOf(people.gender.name()));
+    System.out.println(people.gender.name());
+    System.out.println(people.gender.ordinal());
+
   }
 }
 
