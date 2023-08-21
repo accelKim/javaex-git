@@ -1,0 +1,44 @@
+package Chapter7;
+
+
+public class TriangleCompareTest {
+  public static void main(String[] args) {
+    Triangle t1 = new Triangle(10, 10);
+    Triangle t2 = new Triangle(5, 10);
+    Line l1 = new Line(30);
+
+    int res = t1.compareTo(t2);
+    if (res > 0) {
+      System.out.println(t1 + "가 더 큽니다");
+    } else if (res < 0) {
+      System.out.println(t2 + "가 더 큽니다");
+    }else {
+      System.out.println("두 삼각형이 같습니다");
+    }
+  }
+}
+class Triangle implements Comparable{
+  int width;
+  int height;
+  public Triangle(int width, int height) {
+    this.width = width;
+    this.height = height;
+  }
+  private  double findArea(){
+    return width * height / 2.0;
+  }
+
+  @Override
+  public int compareTo(Object o) {
+    if(o instanceof Triangle) {
+      Triangle triangle = (Triangle) o;
+      return (int)(this.findArea() - triangle.findArea());
+    }
+    return 0;
+  }
+
+  @Override
+  public String toString() {
+    return "삼각형 [밑변 = " +  width + "높이 = " + height +" 넓이 = " + this.findArea() + "]";
+  }
+}
