@@ -1,6 +1,7 @@
 package Chapter7;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class PersonCompareTest {
   public static void main(String[] args) {
@@ -10,9 +11,9 @@ public class PersonCompareTest {
         new Person("손흥민", 20,180,70)
     };
     System.out.println("나이 순서 대로");
-    Arrays.sort(persons);
+    Arrays.sort(persons, Collections.reverseOrder());
     for (Person person:persons) {
-      System.out.println(person.name);
+      System.out.println(person);
     }
   }
 }
@@ -41,6 +42,6 @@ class Person implements Comparable<Person>{
 
   @Override
   public String toString() {
-    return name + "입니다";
+    return "Person [이름 = " + name + ", 나이 = " + age + "]" ;
   }
 }
